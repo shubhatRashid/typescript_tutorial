@@ -35,3 +35,18 @@
     //     }
     //     console.log(check(1234))
     // }
+
+// Error Handling functions
+    // {
+    //     function handleError(message:string):never{
+    //         throw new Error(message)
+    //     }
+    //     // such function are not expected to return anything and hence 'never' should be used
+    // }
+
+// Void return
+    // {
+    //     function logOnConsole(message:string):void{
+    //         console.log(message)
+    //     }
+    // }
