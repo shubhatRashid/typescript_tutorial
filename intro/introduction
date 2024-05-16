@@ -1,0 +1,12 @@
+TYPESCRIPT :
+    Typescript is a development tool built over javascript to get over the
+    limitations of javascript. 
+    Its not a new language .
+    Typescript shows errors at the time of writing the code itself thus makes js 
+    more efficient language.
+    Typescript is a superset of javascript i.e any code written in js
+    is a valid ts code.
+
+TYPES IN TS:
+    Available types are :
+    string, number, boolean, arrays, tuples, object, null, undefined , ANY, never, unknown etc
