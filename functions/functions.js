@@ -13,10 +13,21 @@
 // console.log(subtract(5,1))
 // }
 // Default Values
+// {
+//     function giveGreetings(user:string='user'):string {
+//         return `Hello ,Good Morning ${user}`
+//     }
+//     console.log(giveGreetings('shubhat'))
+// }
+// Multiple types
 {
-    function giveGreetings(user) {
-        if (user === void 0) { user = 'user'; }
-        return "Hello ,Good Morning ".concat(user);
+    function check(input) {
+        if (typeof (input) === 'string') {
+            return true;
+        }
+        else {
+            return 200;
+        }
     }
-    console.log(giveGreetings('shubhat'));
+    console.log(check(1234));
 }
