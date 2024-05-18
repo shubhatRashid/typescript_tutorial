@@ -50,3 +50,43 @@
     //     // doesnot give error and additional property can be passed
     //     // this is the unexpected behavior of ts while using objects
     // }
+
+// READONLY AND OPTIONAL 
+    // {
+    //     // readonly and optional
+    //     type User = {
+    //         readonly id: number,  // 'readonly' specifies that id cannot be changes now
+    //         name:string,
+    //         age:number,
+    //         email?:string  // ? specifying that if email is present it should be a string 
+    //     }
+
+    //     const newUser: User = {
+    //         id : 123456,
+    //         name : 'shubhat',
+    //         age : 25
+    //     }
+    //     console.log(newUser) // works fine without email which is optional
+
+    //     newUser.id = 789456 // gives error as id is read only
+    // }
+
+// TYPE COMBINATION
+    {
+        type cardName = {
+            cardName : string
+        }
+
+        type cardNumber = {
+            cardNumber : number
+        }
+
+        type cardDetails = cardName & cardNumber
+
+        const newCard: cardDetails = {
+            cardName : 'new card',
+            cardNumber : 12345
+        }
+
+        console.log(newCard)
+    }
