@@ -72,21 +72,21 @@
     // }
 
 // TYPE COMBINATION
-    {
-        type cardName = {
-            cardName : string
-        }
+    // {
+    //     type cardName = {
+    //         cardName : string
+    //     }
 
-        type cardNumber = {
-            cardNumber : number
-        }
+    //     type cardNumber = {
+    //         cardNumber : number
+    //     }
 
-        type cardDetails = cardName & cardNumber
+    //     type cardDetails = cardName & cardNumber
 
-        const newCard: cardDetails = {
-            cardName : 'new card',
-            cardNumber : 12345
-        }
+    //     const newCard: cardDetails = {
+    //         cardName : 'new card',
+    //         cardNumber : 12345
+    //     }
 
-        console.log(newCard)
-    }
+    //     console.log(newCard)
+    // }
