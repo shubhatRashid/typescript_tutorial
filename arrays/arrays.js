@@ -9,4 +9,9 @@
         age: 25
     });
     console.log(allusers);
+    // 2d arrays
+    var numbers3 = [
+        [233, 355, 644]
+    ];
+    console.log(numbers3);
 }
