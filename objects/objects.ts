@@ -12,15 +12,15 @@
     // {
     //     function createUser({name:string,age:number}){}
         
-    //     // or using interface keyword
+    //     // or using type alias or 'type' keyword
 
-    //     interface user {
+    //     type User = {
     //         firstName : string,
     //         lastName : string,
     //         age : number
     //     }
 
-    //     function createUser2(user:user){}
+    //     function createUser2(user:User){}
     // }
 
 // OBJECTS WITH FUNCTIONS AS OUTPUT
@@ -35,4 +35,18 @@
     //     function createUser2():{name:string,age:number}{
     //         return {name:'shubhat',age:25}
     //     }
+    // }
+
+// UNEXPECTED BEHAVIOR OF TS
+    // {
+    //     function createUser({name:string,age:number}){}
+
+    //     createUser({name:'shubhat',age:25,email:'shubhat@gmail.com'})
+    //     // function expects only two parameters inside the object and hence gives error on email property
+
+    //     const user = {name:'shubhat',age:25,email:'shubhat@gmail.com'}
+    //     createUser(user)
+
+    //     // doesnot give error and additional property can be passed
+    //     // this is the unexpected behavior of ts while using objects
     // }
