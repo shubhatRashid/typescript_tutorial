@@ -6,7 +6,6 @@
     //     console.log(addTwoNums(1,2))
     // }
 
-
 // Arrow Functions
     // {
     // const subtract = (num1:number,num2:number):number => {
