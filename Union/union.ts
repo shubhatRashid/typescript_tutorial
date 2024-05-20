@@ -29,11 +29,11 @@
     // }
 
 // UNION IN ARRAYS
-    {
-        // let alphabetsAndnums:string = ['a','b','c',6]                // gives error
-        // let alphabetsAndnums: string[] | number[] = ['a','b','c',6]  // wrong syntax as it specifies either a full array of strings or a
-        //                                                                 full array of numbers and not union of them
-        
-        let alphabetsAndnums:(string | number )[] = ['a','b','c',6]     // right syntax for union in arrays
-        console.log(alphabetsAndnums)
-    }
+    // {
+    //     // let alphabetsAndnums:string = ['a','b','c',6]                // gives error
+    //     // let alphabetsAndnums: string[] | number[] = ['a','b','c',6]  // wrong syntax as it specifies either a full array of strings or a
+    //     //                                                                 full array of numbers and not union of them
+
+    //     let alphabetsAndnums:(string | number )[] = ['a','b','c',6]     // right syntax for union in arrays
+    //     console.log(alphabetsAndnums)
+    // }
