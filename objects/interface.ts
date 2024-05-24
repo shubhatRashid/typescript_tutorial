@@ -29,11 +29,22 @@
             coupon:(couponName='shubhat') => 20,
             address : 'jandk'
         }
+
+        // extending an interface : a new interface can take all types of previous interfaces using extends keyword 
+        interface admin extends User  {
+            isAdmin : boolean
+        }
+
+        const user3:admin ={
+            isAdmin: true,
+            name:'shubhat',
+            email:'a@b.com',
+            age : 25,
+            otp:() => 12345,
+            coupon:(couponName='shubhat') => 20,
+            address : 'jandk'
+        }
         console.log(user)
         console.log(user2)
-    }
-
-// Interface vs Type
-    {
-
+        console.log(user3)
     }
