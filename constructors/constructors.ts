@@ -65,3 +65,37 @@
 //     user.setPassword = 123456789
 //     console.log(user.getPassword)
 // }
+
+// PROTECTED KEYWORD
+{
+    // private properties are not accessible outside class and hence if another class
+    // inherits its properties, the private variables are not available in that class
+    // To make sure a private varaible is accessible in inheriting classes 'protected'
+    // keyword is used
+
+    
+    class User{
+        protected password : number
+        constructor(public name:string,public email:string){
+            this.name = name
+            this.email = email
+        }
+
+        get getPassword():number {
+            return this.password
+        }
+
+        set setPassword(newPassword:number){
+            this.password = newPassword
+        }
+    }
+
+    class Admin extends User {
+        get getUserPassword() : number {
+            return this.password
+            // if password above is private this line gives error
+            // however protected doesnot give error
+        }
+    }
+        
+}
