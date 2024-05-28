@@ -101,29 +101,29 @@
 // }
 
 // USING INTERFACE IN CLASSES
-{
-    interface CarInterface {
-        model : number,
-        seats : number,
-        color : string,
-        convertible : boolean
-    }
+// {
+//     interface CarInterface {
+//         model : number,
+//         seats : number,
+//         color : string,
+//         convertible : boolean
+//     }
 
-    interface getRegNum {
-        getNumber() : number
-    }
-    class Car implements CarInterface,getRegNum {
-        constructor(
-            public model:number,
-            public seats : number,
-            public color : string,
-            public convertible : boolean,
-            private registrationNumber : number
-        )
-        {}
+//     interface getRegNum {
+//         getNumber() : number
+//     }
+//     class Car implements CarInterface,getRegNum {
+//         constructor(
+//             public model:number,
+//             public seats : number,
+//             public color : string,
+//             public convertible : boolean,
+//             private registrationNumber : number
+//         )
+//         {}
 
-        getNumber(): number {
-            return this.registrationNumber
-        }
-    }
-}
+//         getNumber(): number {
+//             return this.registrationNumber
+//         }
+//     }
+// }
