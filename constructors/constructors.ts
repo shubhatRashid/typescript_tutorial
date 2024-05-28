@@ -37,3 +37,31 @@
 //         }
 //     }
 // }
+
+// GETTERS AND SETTERS
+// {
+//     // Using dot notation to get and set a property doesnot use any validation for data
+//     // getters and setters are used to get and modify data according to some rules set inside 
+//     // these functions.
+//     // Getters and setters allow encapsulation.
+//     // Even private variables can  be accessed and set using getters and setters but we can define how we want to show them
+//     class User{
+//         private password : number
+//         constructor(public name:string,public email:string){
+//             this.name = name
+//             this.email = email
+//         }
+
+//         get getPassword():number {
+//             return this.password
+//         }
+
+//         set setPassword(newPassword:number){
+//             this.password = newPassword
+//         }
+//     }
+
+//     let user = new User('shubhat','a@b.com')
+//     user.setPassword = 123456789
+//     console.log(user.getPassword)
+// }
