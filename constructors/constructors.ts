@@ -101,31 +101,79 @@
 // }
 
 // USING INTERFACE IN CLASSES
-{
-    interface CarInterface {
-        model : number,
-        seats : number,
-        color : string,
-        convertible : boolean
-    }
+// {
+//     interface CarInterface {
+//         model : number,
+//         seats : number,
+//         color : string,
+//         convertible : boolean
+//     }
 
-    interface getRegNum {
-        getNumber() : number
-    }
-    class Car implements CarInterface,getRegNum {
-        constructor(
-            public model:number,
-            public seats : number,
-            public color : string,
-            public convertible : boolean,
-            private registrationNumber : number
-        )
-        {}
+//     interface getRegNum {
+//         getNumber() : number
+//     }
+//     class Car implements CarInterface,getRegNum {
+//         constructor(
+//             public model:number,
+//             public seats : number,
+//             public color : string,
+//             public convertible : boolean,
+//             private registrationNumber : number
+//         )
+//         {}
 
-        getNumber(): number {
-            return this.registrationNumber
-        }
-    }
-    const car = new Car(2024,4,'white',true,12131)
-    console.log(car.getNumber)
-}
+//         getNumber(): number {
+//             return this.registrationNumber
+//         }
+//     }
+//     const car = new Car(2024,4,'white',true,12131)
+//     console.log(car.getNumber)
+// }
+
+// ABSTRACT CLASSES
+// {
+//     /*
+//     Abstract classes are classes which are inherited by other classes and cannot form
+//     object on their own they define the structure of the classes.
+//     They can have abstract methods : without definition 
+//     and concrete methods : with default definition
+    
+//     Unlike interfaces which define types abstract classes define the whole structure of the classes who implement them*/
+//     abstract class abstractCar{
+//         constructor(
+//             public model:number,
+//             public seats : number,
+//             public color : string,
+//             public convertible : boolean,
+//             public registrationNumber : number
+//         )
+//         {}
+
+//         abstract getNumber():number; // abstract method : without definition
+
+//         getSeats():number {
+//             return this.seats
+//         }
+//     }
+//     class Car extends abstractCar {
+//         constructor(
+//             public model:number,
+//             public seats : number,
+//             public color : string,
+//             public convertible : boolean,
+//             public registrationNumber : number
+//         )
+//         {
+//             super(model,seats,color,convertible,registrationNumber)
+//         }
+
+//         getNumber(): number {
+//             return this.registrationNumber
+//         }
+//         getSeats(): number {
+//             return this.seats
+//         }
+//     }
+//     const car = new Car(2024,4,'white',true,12131)
+//     console.log(car.getNumber)
+// }
