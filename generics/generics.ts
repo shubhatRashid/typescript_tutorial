@@ -46,22 +46,22 @@
     //     console.log(typeof identity2([1,2,3,4]))
     // }
 // FUNCTION TRYING TO GET PROPERTIES OF AN OBJECT WITH PROPER TYPES
-{
-    interface database {
-        connection : string,
-        data : object,
-        id : number
-    }
+    // {
+    //     interface database {
+    //         connection : string,
+    //         data : object,
+    //         id : number
+    //     }
 
-    function temp<T,U extends database>(obj:T,data:U):object{
-        return {}
-    }
-    // This represents a function which takes an object with protocol as database as input
-    // and a value which is just like obj and returns an object
+    //     function temp<T,U extends database>(obj:T,data:U):object{
+    //         return {}
+    //     }
+    //     // This represents a function which takes an object with protocol as database as input
+    //     // and a value which is just like obj and returns an object
 
-    function temp2<T,U extends keyof database>(obj:T,data:U):U{
-        return data
-    }
-    // This represents a function which takes an object with protocol as database as input
-    // and a value which is a property of  obj and returns an data of type which is also form database
-}
+    //     function temp2<T,U extends keyof database>(obj:T,data:U):U{
+    //         return data
+    //     }
+    //     // This represents a function which takes an object with protocol as database as input
+    //     // and a value which is a property of  obj and returns an data of type which is also form database
+    // }
