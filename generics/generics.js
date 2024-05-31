@@ -37,19 +37,45 @@
 //     }
 //     console.log(typeof identity2([1,2,3,4]))
 // }
-var colorCode = function (code) {
-    var hashmap = {
-        Black: 0,
-        Brown: 1,
-        Red: 2,
-        Orange: 3,
-        Yellow: 4,
-        Green: 5,
-        Blue: 6,
-        Violet: 7,
-        Grey: 8,
-        White: 9
-    };
-    return hashmap[code];
-};
-console.log(colorCode('Black'));
+// FUNCTION TRYING TO GET PROPERTIES OF AN OBJECT WITH PROPER TYPES
+// {
+//     interface database {
+//         connection : string,
+//         data : object,
+//         id : number
+//     }
+//     function temp<T,U extends database>(obj:T,data:U):object{
+//         return {}
+//     }
+//     // This represents a function which takes an object with protocol as database as input
+//     // and a value which is just like obj and returns an object
+//     function temp2<T,U extends keyof database>(obj:T,data:U):U{
+//         return data
+//     }
+//     // This represents a function which takes an object with protocol as database as input
+//     // and a value which is a property of  obj and returns an data of type which is also form database
+// }
+// GENERIC CLASSES
+{
+    // We need a class that can take both the interfaces and add them to cart
+    var Sellible = /** @class */ (function () {
+        function Sellible() {
+            this.cart = [];
+        }
+        Sellible.prototype.addToCart = function (product) {
+            this.cart.push(product);
+        };
+        Sellible.prototype.fetchCart = function () {
+            return this.cart;
+        };
+        return Sellible;
+    }());
+    var myStore = new Sellible();
+    myStore.addToCart({
+        title: 'new book',
+        issueDate: 2024,
+        pages: 100,
+        author: 'me'
+    });
+    console.log(myStore.fetchCart());
+}

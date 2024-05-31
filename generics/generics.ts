@@ -45,6 +45,7 @@
     //     }
     //     console.log(typeof identity2([1,2,3,4]))
     // }
+
 // FUNCTION TRYING TO GET PROPERTIES OF AN OBJECT WITH PROPER TYPES
     // {
     //     interface database {
@@ -64,4 +65,44 @@
     //     }
     //     // This represents a function which takes an object with protocol as database as input
     //     // and a value which is a property of  obj and returns an data of type which is also form database
+    // }
+
+// GENERIC CLASSES
+    // {
+    //     interface Book {
+    //         title : string,
+    //         issueDate : number,
+    //         pages : number,
+    //         author : string
+    //     }
+
+    //     interface Magazine {
+    //         title : string,
+    //         issueDate : number,
+    //         publisher : string,
+    //         type : string
+    //     }
+
+    //     // We need a class that can take both the interfaces and add them to cart
+    //     class Sellible<T>{
+    //         public cart : T[] = []
+    //         addToCart(product:T):void
+    //             {
+    //                 this.cart.push(product)
+    //             }  
+    //         fetchCart():T[]
+    //             {
+    //                 return this.cart
+    //             }
+    //     }
+
+    //     let myStore = new Sellible<Book|Magazine>()
+    //     myStore.addToCart({
+    //         title : 'new book',
+    //         issueDate : 2024,
+    //         pages : 100,
+    //         author : 'me'
+    //     })
+
+    //     console.log(myStore.fetchCart())
     // }
