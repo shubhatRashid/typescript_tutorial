@@ -27,12 +27,29 @@
 //     console.log(identity4<string>('hello')) // works as string type for input and output
 // }
 // GENERICS IN ARRAYS AND ARROW FUNCTIONS
-{
-    // Syntax for arrow functions
-    var identity = function (val) { return val; };
-    // Syntax for arrays
-    function identity2(data) {
-        return data;
-    }
-    console.log(typeof identity2([1, 2, 3, 4]));
-}
+// {   
+//     // Syntax for arrow functions
+//     const identity = <T>(val:T):T => {return val} 
+//     // Syntax for arrays
+//     function identity2<T,>(data:T[]) : T[] // The comma in <T,> is generally used to differentiate b/w html tag or react component and generic type
+//     {
+//         return data
+//     }
+//     console.log(typeof identity2([1,2,3,4]))
+// }
+var colorCode = function (code) {
+    var hashmap = {
+        Black: 0,
+        Brown: 1,
+        Red: 2,
+        Orange: 3,
+        Yellow: 4,
+        Green: 5,
+        Blue: 6,
+        Violet: 7,
+        Grey: 8,
+        White: 9
+    };
+    return hashmap[code];
+};
+console.log(colorCode('Black'));
