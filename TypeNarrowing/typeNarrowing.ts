@@ -15,15 +15,31 @@
 
  */
 
-// INSTANCE_OF AND TYPE PREDICATES :
+// INSTANCE_OF:
+    // {
+    //     // InstanceOf is like typeOf but it is used with objects which can be created using new keyword
+    //     // e.g Date, Array etc
+    //     function logValue(x: Date | string) {
+    //         if (x instanceof Date) {
+    //           console.log(x.toUTCString());
+    //         } else {
+    //           console.log(x.toUpperCase());
+    //         }
+    //       }
+
+        
+    // }
+
+// TYPE PREDICATES 
     {
-        // InstanceOf is like typeOf but it is used with objects which can be created using new keyword
-        // e.g Date, Array etc
-        function logValue(x: Date | string) {
-            if (x instanceof Date) {
-              console.log(x.toUTCString());
-            } else {
-              console.log(x.toUpperCase());
-            }
-          }
+        type Fish = {swim:()=>void}
+        type Bird = {fly:()=>void}
+
+        // checkTypes Using functions
+        function isFish(pet:Fish | Bird):pet is Fish{
+            return (pet as Fish).swim() !== undefined
+        }
+
+        let res = isFish({swim:()=>true})
+        console.log(res)
     }
