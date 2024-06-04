@@ -31,15 +31,43 @@
     // }
 
 // TYPE PREDICATES 
-    {
-        type Fish = {swim:()=>void}
-        type Bird = {fly:()=>void}
+    // {
+    //     type Fish = {swim:()=>void}
+    //     type Bird = {fly:()=>void}
 
-        // checkTypes Using functions
-        function isFish(pet:Fish | Bird):pet is Fish{
-            return (pet as Fish).swim() !== undefined
+    //     // checkTypes Using functions
+    //     function isFish(pet:Fish | Bird):pet is Fish{
+    //         return (pet as Fish).swim() !== undefined
+    //     }
+
+    //     let res = isFish({swim:()=>true})
+    //     console.log(res)
+    // }
+
+
+// Discrimnated Union
+    {
+        interface Square  {
+            kind : 'square',
+            side : number,
+            getArea : (sideLength : number) =>number
         }
 
-        let res = isFish({swim:()=>true})
-        console.log(res)
+        interface Circle  {
+            kind : 'circle',
+            radius : number,
+            getArea : (sideLength : number) =>number
+        }
+
+        type Shape = Square | Circle
+
+        function getAreaOfShape (shape:Shape):number{
+            if (shape.kind === 'circle'){
+                return shape.radius * Math.PI * shape.radius
+            }else{
+                return shape.side**2
+            }
+        }
+        // The property 'kind' is called discripnating property and union between such types having common property is 
+        // discrimnated union . This is used by typeScript to narrow down members of the union
     }
