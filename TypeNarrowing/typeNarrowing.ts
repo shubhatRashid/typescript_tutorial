@@ -59,6 +59,14 @@
             getArea : (sideLength : number) =>number
         }
 
+        interface Rec  {
+            kind : 'rec',
+            length : number,
+            width : number,
+            getArea : (sideLength : number) =>number
+        }
+
+
         type Shape = Square | Circle
 
         function getAreaOfShape (shape:Shape):number{
@@ -70,4 +78,21 @@
         }
         // The property 'kind' is called discripnating property and union between such types having common property is 
         // discrimnated union . This is used by typeScript to narrow down members of the union
+
+        // USING SWITCH STATEMENTS
+        function getAreaOfShape2(shape:Shape){
+            switch(shape.kind){
+                case 'circle':
+                    return Math.PI*shape.radius**2
+                case 'square':
+                    return shape.side**2
+                default :
+                    const _exhaustiveCase:never = shape
+                    return _exhaustiveCase
+            }
+        }
+        // Never is assignable to every type but no type can be assigned to never so we use this to make our code efficient
+        // If in future we add rec into the shape union we will get 
+        // an error showing exhaustiveCase which is never type cannot be Rec type
+        // Which just means we need to add another case statement in the fucntion
     }
